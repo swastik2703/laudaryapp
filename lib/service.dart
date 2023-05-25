@@ -20,7 +20,7 @@ class ServicePage extends StatelessWidget {
         centerTitle: true,
         elevation: 0,
         brightness: Brightness.dark,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.amber.shade500,
         leading: Column(
           //mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
