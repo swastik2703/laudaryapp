@@ -25,7 +25,7 @@ class _LoginpageState extends State<Loginpage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        brightness: Brightness.light,
+        //brightness: Brightness.light,
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {

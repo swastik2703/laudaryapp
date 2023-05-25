@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:laudaryapp/Services/Mens.dart';
-import 'package:laudaryapp/loginpage.dart';
+import 'package:laudaryapp/Services/household.dart';
+import 'package:laudaryapp/Services/kids.dart';
 import 'package:laudaryapp/mycontroller.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +15,7 @@ class addItems extends StatefulWidget {
 }
 
 class _addItemsState extends State<addItems> {
-  final Mycontroller c = Get.put(Mycontroller());
+  final Mycontroller dry = Get.put(Mycontroller());
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
@@ -26,7 +27,7 @@ class _addItemsState extends State<addItems> {
         ),),
         centerTitle: true,
         elevation: 0,
-        brightness: Brightness.dark,
+        //brightness: Brightness.dark,
         backgroundColor: Colors.amberAccent.shade400,
         leading: Column(
           //mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -55,6 +56,7 @@ class _addItemsState extends State<addItems> {
                 Padding(
                   padding: const EdgeInsets.all(2),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
                         //margin: EdgeInsets.only(left: 5,),
@@ -86,38 +88,6 @@ class _addItemsState extends State<addItems> {
                           ),
                         ),
 
-
-                          // child : Center(
-                          //   child: TextButton(
-                          //     onPressed: (){
-                          //     },
-                          //     child: Text(
-                          //       "Mens",style: TextStyle(
-                          //       color: Colors.black,
-                          //       fontWeight: FontWeight.bold,
-                          //       fontSize: 20,
-                          //     ),
-                          //     ),
-                          //   ),
-                          // ),
-                          // child: Center(
-                          //   child: ElevatedButton(
-                          //     style: ElevatedButton.styleFrom(primary: Colors.white, elevation: 5,
-                          //     shadowColor: Colors.lightBlueAccent, ),
-                          //     onPressed: (){
-                          //       Navigator.push(context, MaterialPageRoute(builder: (context)=> MensWear()));
-                          //     },
-                          //     child: Text('Mens',style: TextStyle(
-                          //         color: Colors.black
-                          //     ),),
-                          //   ),
-                          // )
-                        // child: Center(child: TextButton(
-                        //   onPressed: ()=> Loginpage(),
-                        //   child: Center(child: Text('Mens',style: TextStyle(fontSize: 16,fontWeight: FontWeight.normal, color: Colors.black))),
-                        // ),
-                        // ),
-
                       ),
                       SizedBox(width: 10,),
                       Container(
@@ -139,6 +109,7 @@ class _addItemsState extends State<addItems> {
                         child: Center(
                           child: TextButton(
                             onPressed: (){
+                              Get.to(()=>WomensWear());
                             },
                             child: Text(
                               "Women",style: TextStyle(
@@ -150,55 +121,7 @@ class _addItemsState extends State<addItems> {
                           ),
                         ),
 
-
-                        // child : Center(
-                        //   child: TextButton(
-                        //     onPressed: (){
-                        //     },
-                        //     child: Text(
-                        //       "Mens",style: TextStyle(
-                        //       color: Colors.black,
-                        //       fontWeight: FontWeight.bold,
-                        //       fontSize: 20,
-                        //     ),
-                        //     ),
-                        //   ),
-                        // ),
-                        // child: Center(
-                        //   child: ElevatedButton(
-                        //     style: ElevatedButton.styleFrom(primary: Colors.white, elevation: 5,
-                        //     shadowColor: Colors.lightBlueAccent, ),
-                        //     onPressed: (){
-                        //       Navigator.push(context, MaterialPageRoute(builder: (context)=> MensWear()));
-                        //     },
-                        //     child: Text('Mens',style: TextStyle(
-                        //         color: Colors.black
-                        //     ),),
-                        //   ),
-                        // )
-                        // child: Center(child: TextButton(
-                        //   onPressed: ()=> Loginpage(),
-                        //   child: Center(child: Text('Mens',style: TextStyle(fontSize: 16,fontWeight: FontWeight.normal, color: Colors.black))),
-                        // ),
-                        // ),
-
                       ),
-                      // Container(
-                      //   height: h*0.05,
-                      //   width: w*0.21,
-                      //     child: Center(
-                      //       child: ElevatedButton(
-                      //         style: ElevatedButton.styleFrom(primary: Colors.white, elevation: 5,
-                      //           shadowColor: Colors.lightBlueAccent, ),
-                      //         onPressed: (){
-                      //           Navigator.push(context, MaterialPageRoute(builder: (context)=> WomensWear()));
-                      //         },
-                      //         child: Text('Women',style: TextStyle(
-                      //             color: Colors.black
-                      //         ),),
-                      //       ),
-                      //     )
-                      // ),
                       SizedBox(width: 10,),
                       Container(
                         //margin: EdgeInsets.only(left: 5,),
@@ -219,6 +142,7 @@ class _addItemsState extends State<addItems> {
                         child: Center(
                           child: TextButton(
                             onPressed: (){
+                              Get.to(()=>HouseHolds());
                             },
                             child: Text(
                               "HouseHold",style: TextStyle(
@@ -228,57 +152,9 @@ class _addItemsState extends State<addItems> {
                             ),
                             ),
                           ),
-                        ),
-
-
-                        // child : Center(
-                        //   child: TextButton(
-                        //     onPressed: (){
-                        //     },
-                        //     child: Text(
-                        //       "Mens",style: TextStyle(
-                        //       color: Colors.black,
-                        //       fontWeight: FontWeight.bold,
-                        //       fontSize: 20,
-                        //     ),
-                        //     ),
-                        //   ),
-                        // ),
-                        // child: Center(
-                        //   child: ElevatedButton(
-                        //     style: ElevatedButton.styleFrom(primary: Colors.white, elevation: 5,
-                        //     shadowColor: Colors.lightBlueAccent, ),
-                        //     onPressed: (){
-                        //       Navigator.push(context, MaterialPageRoute(builder: (context)=> MensWear()));
-                        //     },
-                        //     child: Text('Mens',style: TextStyle(
-                        //         color: Colors.black
-                        //     ),),
-                        //   ),
-                        // )
-                        // child: Center(child: TextButton(
-                        //   onPressed: ()=> Loginpage(),
-                        //   child: Center(child: Text('Mens',style: TextStyle(fontSize: 16,fontWeight: FontWeight.normal, color: Colors.black))),
-                        // ),
-                        // ),
+                        )
 
                       ),
-                      // Center(
-                      //   child: Container(
-                      //     height: h*0.045,
-                      //     width: 93,
-                      //         child: ElevatedButton(
-                      //           style: ElevatedButton.styleFrom(primary: Colors.white, elevation: 5,
-                      //             shadowColor: Colors.lightBlueAccent, ),
-                      //           onPressed: (){
-                      //             Navigator.push(context, MaterialPageRoute(builder: (context)=> Loginpage()));
-                      //           },
-                      //           child: Text('Household',style: TextStyle(
-                      //               color: Colors.black
-                      //           ),),
-                      //         ),
-                      //   ),
-                      // ),
                       SizedBox(width: 10,),
                       Container(
                         //margin: EdgeInsets.only(left: 5,),
@@ -299,9 +175,10 @@ class _addItemsState extends State<addItems> {
                         child: Center(
                           child: TextButton(
                             onPressed: (){
+                              Get.to(()=>KidsWear());
                             },
                             child: Text(
-                              "Child",style: TextStyle(
+                              "Kids",style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
                               fontSize: 14,
@@ -343,23 +220,6 @@ class _addItemsState extends State<addItems> {
                         // ),
 
                       ),
-                      // Container(
-                      //   margin: EdgeInsets.only(right: 5,),
-                      //   height: h*0.05,
-                      //   width: 60,
-                      //     child: Center(
-                      //       child: ElevatedButton(
-                      //         style: ElevatedButton.styleFrom(primary: Colors.white, elevation: 5,
-                      //           shadowColor: Colors.lightBlueAccent, ),
-                      //         onPressed: (){
-                      //           Navigator.push(context, MaterialPageRoute(builder: (context)=> Loginpage()));
-                      //         },
-                      //         child: Text('child',style: TextStyle(
-                      //             color: Colors.black
-                      //         ),),
-                      //       ),
-                      //     )
-                      // ),
                     ],
                   ),
                 ),
@@ -384,7 +244,7 @@ class _addItemsState extends State<addItems> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Image.asset('img/dry-clean.png',width: 70,),
+                          Image.asset('img/pants.png',width: 70,),
                           SizedBox(width: 20,),
                           Text("shorts",style: TextStyle(
                             fontSize: 22,
@@ -403,11 +263,11 @@ class _addItemsState extends State<addItems> {
                               // child: Icon(Icons.add,color: Colors.white,),
                               child: IconButton(
                                 icon: Icon(Icons.add,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.incrementshorts(),
+                                onPressed: ()=> dry.incrementshorts(),
                               )
                           ),
                           SizedBox(width: 10,),
-                          Obx(() => Text('${c.shorts.toString()}', style: TextStyle(
+                          Obx(() => Text('${dry.shorts.toString()}', style: TextStyle(
                             fontSize: 20,
                           ),),),
                           SizedBox(width: 10,),
@@ -420,7 +280,7 @@ class _addItemsState extends State<addItems> {
                               ),
                               child: IconButton(
                                 icon: Icon(Icons.remove,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.decrementshort(),
+                                onPressed: ()=> dry.decrementshort(),
                               )
                           )
 
@@ -448,7 +308,7 @@ class _addItemsState extends State<addItems> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Image.asset('img/dry-clean.png',width: 70,),
+                          Image.asset('img/cloth.png',width: 70,),
                           SizedBox(width: 20,),
                           Text("Shirt",style: TextStyle(
                             fontSize: 22,
@@ -467,11 +327,11 @@ class _addItemsState extends State<addItems> {
                               // child: Icon(Icons.add,color: Colors.white,),
                               child: IconButton(
                                 icon: Icon(Icons.add,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.incrementshirt(),
+                                onPressed: ()=> dry.incrementshirt(),
                               )
                           ),
                           SizedBox(width: 10,),
-                          Obx(() => Text('${c.shirts.toString()}', style: TextStyle(
+                          Obx(() => Text('${dry.shirts.toString()}', style: TextStyle(
                             fontSize: 20,
                           ),),),
                           SizedBox(width: 10,),
@@ -484,7 +344,7 @@ class _addItemsState extends State<addItems> {
                               ),
                               child: IconButton(
                                 icon: Icon(Icons.remove,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.decrementshirt(),
+                                onPressed: ()=> dry.decrementshirt(),
                               )
                           )
                           // Center(
@@ -520,7 +380,7 @@ class _addItemsState extends State<addItems> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Image.asset('img/dry-clean.png',width: 70,),
+                          Image.asset('img/tshirt.png',width: 70,),
                           SizedBox(width: 25,),
                           Text("T-shirt",style: TextStyle(
                             fontSize: 22,
@@ -539,11 +399,11 @@ class _addItemsState extends State<addItems> {
                               // child: Icon(Icons.add,color: Colors.white,),
                               child: IconButton(
                                 icon: Icon(Icons.add,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.incrementtshirt(),
+                                onPressed: ()=> dry.incrementtshirt(),
                               )
                           ),
                           SizedBox(width: 10,),
-                          Obx(() => Text('${c.tshirt.toString()}', style: TextStyle(
+                          Obx(() => Text('${dry.tshirt.toString()}', style: TextStyle(
                             fontSize: 20,
                           ),),),
                           SizedBox(width: 10,),
@@ -556,7 +416,7 @@ class _addItemsState extends State<addItems> {
                               ),
                               child: IconButton(
                                 icon: Icon(Icons.remove,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.decrementtshirt(),
+                                onPressed: ()=> dry.decrementtshirt(),
                               )
                           )
                           // Center(
@@ -592,7 +452,7 @@ class _addItemsState extends State<addItems> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Image.asset('img/dry-clean.png',width: 70,),
+                          Image.asset('img/trousers.png',width: 70,),
                           SizedBox(width: 25,),
                           Text("Trouser",style: TextStyle(
                             fontSize: 22,
@@ -611,11 +471,11 @@ class _addItemsState extends State<addItems> {
                               // child: Icon(Icons.add,color: Colors.white,),
                               child: IconButton(
                                 icon: Icon(Icons.add,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.incrementtrouser(),
+                                onPressed: ()=> dry.incrementtrouser(),
                               )
                           ),
                           SizedBox(width: 10,),
-                          Obx(() => Text('${c.trouser.toString()}', style: TextStyle(
+                          Obx(() => Text('${dry.trouser.toString()}', style: TextStyle(
                             fontSize: 20,
                           ),),),
                           SizedBox(width: 10,),
@@ -628,7 +488,7 @@ class _addItemsState extends State<addItems> {
                               ),
                               child: IconButton(
                                 icon: Icon(Icons.remove,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.decrementtrouser(),
+                                onPressed: ()=> dry.decrementtrouser(),
                               )
                           )
                           // Center(
@@ -664,7 +524,7 @@ class _addItemsState extends State<addItems> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Image.asset('img/dry-clean.png',width: 70,),
+                          Image.asset('img/jeans.png',width: 70,),
                           SizedBox(width: 25,),
                           Text("Jeans",style: TextStyle(
                             fontSize: 22,
@@ -683,11 +543,11 @@ class _addItemsState extends State<addItems> {
                               // child: Icon(Icons.add,color: Colors.white,),
                               child: IconButton(
                                 icon: Icon(Icons.add,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.incrementjeans(),
+                                onPressed: ()=> dry.incrementjeans(),
                               )
                           ),
                           SizedBox(width: 10,),
-                          Obx(() => Text('${c.jeans.toString()}', style: TextStyle(
+                          Obx(() => Text('${dry.jeans.toString()}', style: TextStyle(
                             fontSize: 20,
                           ),),),
                           SizedBox(width: 10,),
@@ -700,7 +560,7 @@ class _addItemsState extends State<addItems> {
                               ),
                               child: IconButton(
                                 icon: Icon(Icons.remove,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.decrementjeans(),
+                                onPressed: ()=> dry.decrementjeans(),
                               )
                           )
                         ],
@@ -727,7 +587,7 @@ class _addItemsState extends State<addItems> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Image.asset('img/dry-clean.png',width: 70,),
+                          Image.asset('img/sweater.png',width: 70,),
                           SizedBox(width: 25,),
                           Text("Sweater",style: TextStyle(
                             fontSize: 22,
@@ -746,11 +606,11 @@ class _addItemsState extends State<addItems> {
                               // child: Icon(Icons.add,color: Colors.white,),
                               child: IconButton(
                                 icon: Icon(Icons.add,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.incrementsweater(),
+                                onPressed: ()=> dry.incrementsweater(),
                               )
                           ),
                           SizedBox(width: 10,),
-                          Obx(() => Text('${c.sweater.toString()}', style: TextStyle(
+                          Obx(() => Text('${dry.sweater.toString()}', style: TextStyle(
                             fontSize: 20,
                           ),),),
                           SizedBox(width: 10,),
@@ -763,7 +623,7 @@ class _addItemsState extends State<addItems> {
                               ),
                               child: IconButton(
                                 icon: Icon(Icons.remove,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.decrementsweater(),
+                                onPressed: ()=> dry.decrementsweater(),
                               )
                           )
                         ],
@@ -790,7 +650,7 @@ class _addItemsState extends State<addItems> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Image.asset('img/dry-clean.png',width: 70,),
+                          Image.asset('img/kurta.png',width: 70,),
                           SizedBox(width: 25,),
                           Text("Kurta",style: TextStyle(
                             fontSize: 22,
@@ -809,11 +669,11 @@ class _addItemsState extends State<addItems> {
                               // child: Icon(Icons.add,color: Colors.white,),
                               child: IconButton(
                                 icon: Icon(Icons.add,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.incrementkurta(),
+                                onPressed: ()=> dry.incrementkurta(),
                               )
                           ),
                           SizedBox(width: 10,),
-                          Obx(() => Text('${c.kurta.toString()}', style: TextStyle(
+                          Obx(() => Text('${dry.kurta.toString()}', style: TextStyle(
                             fontSize: 20,
                           ),),),
                           SizedBox(width: 10,),
@@ -826,7 +686,7 @@ class _addItemsState extends State<addItems> {
                               ),
                               child: IconButton(
                                 icon: Icon(Icons.remove,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.decrementkurta(),
+                                onPressed: ()=> dry.decrementkurta(),
                               )
                           )
                         ],
@@ -853,7 +713,7 @@ class _addItemsState extends State<addItems> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Image.asset('img/dry-clean.png',width: 70,),
+                          Image.asset('img/sweatshirt.png',width: 70,),
                           SizedBox(width: 25,),
                           Text("Sweatshirt",style: TextStyle(
                             fontSize: 22,
@@ -872,11 +732,11 @@ class _addItemsState extends State<addItems> {
                               // child: Icon(Icons.add,color: Colors.white,),
                               child: IconButton(
                                 icon: Icon(Icons.add,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.incrementsweatshirt(),
+                                onPressed: ()=> dry.incrementsweatshirt(),
                               )
                           ),
                           SizedBox(width: 10,),
-                          Obx(() => Text('${c.sweatshirt.toString()}', style: TextStyle(
+                          Obx(() => Text('${dry.sweatshirt.toString()}', style: TextStyle(
                             fontSize: 20,
                           ),),),
                           SizedBox(width: 10,),
@@ -889,7 +749,7 @@ class _addItemsState extends State<addItems> {
                               ),
                               child: IconButton(
                                 icon: Icon(Icons.remove,color: Colors.white, size: 10,),
-                                onPressed: ()=> c.decrementsweatshirt(),
+                                onPressed: ()=> dry.decrementsweatshirt(),
                               )
                           )
                         ],

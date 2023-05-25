@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:laudaryapp/Additem1.dart';
+import 'package:laudaryapp/Services/Mens.dart';
 import 'package:laudaryapp/signuppage.dart';
 
 class ServicePage extends StatelessWidget {
@@ -19,7 +20,7 @@ class ServicePage extends StatelessWidget {
         ),),
         centerTitle: true,
         elevation: 0,
-        brightness: Brightness.dark,
+        //brightness: Brightness.dark,
         backgroundColor: Colors.amber.shade500,
         leading: Column(
           //mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -79,7 +80,7 @@ class ServicePage extends StatelessWidget {
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(primary: Colors.black54, elevation: 10,),
                               onPressed: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=> addItems()));
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> MensWear()));
                               },
                               child: Text('Add items',style: TextStyle(
                                 color: Colors.white
@@ -123,7 +124,9 @@ class ServicePage extends StatelessWidget {
                           Center(
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(primary: Colors.black54, elevation: 10,),
-                              onPressed: (){},
+                              onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> addItems()));
+                              },
                               child: Text('Add items',style: TextStyle(
                                   color: Colors.white
                               ),),
@@ -166,7 +169,9 @@ class ServicePage extends StatelessWidget {
                           Center(
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(primary: Colors.black54, elevation: 10,),
-                              onPressed: (){},
+                              onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> addItems()));
+                              },
                               child: Text('Add items',style: TextStyle(
                                   color: Colors.white
                               ),),
@@ -209,7 +214,9 @@ class ServicePage extends StatelessWidget {
                           Center(
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(primary: Colors.black54, elevation: 10,),
-                              onPressed: (){},
+                              onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> addItems()));
+                              },
                               child: Text('Add items',style: TextStyle(
                                   color: Colors.white
                               ),),

@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Mycontroller extends GetxController{
+class myController extends GetxController{
   var shorts = 0.obs;
-  var pants = 0.obs;
   var Girlshorts = 0.obs;
   var GirlJeans = 0.obs;
+  var pants = 0.obs;
   var shirts = 0.obs;
   var cardigan = 0.obs;
   var jumpsuit = 0.obs;
@@ -29,6 +29,21 @@ class Mycontroller extends GetxController{
   var Table_Cloth = 0.obs;
   var HandTowel = 0.obs;
   var Cushion_Cover = 0.obs;
+
+  incrementsingleBedsheet(){
+    Single_Bedsheet.value++;
+  }
+
+  decrementsingleBedsheet(){
+    if(Single_Bedsheet.value <= 0 ){
+      Get.snackbar('items', 'No items added to cart', icon: Icon(Icons.add_alert), barBlur: 20,
+          isDismissible: true,
+          duration: Duration(seconds: 2));
+    }
+    else{
+      Single_Bedsheet.value--;
+    }
+  }
 
   incrementGirlShort(){
     Girlshorts.value++;
@@ -57,21 +72,6 @@ class Mycontroller extends GetxController{
     }
     else{
       GirlJeans.value--;
-    }
-  }
-
-  incrementsingleBedsheet(){
-    Single_Bedsheet.value++;
-  }
-
-  decrementsingleBedsheet(){
-    if(Single_Bedsheet.value <= 0 ){
-      Get.snackbar('items', 'No items added to cart', icon: Icon(Icons.add_alert), barBlur: 20,
-          isDismissible: true,
-          duration: Duration(seconds: 2));
-    }
-    else{
-      Single_Bedsheet.value--;
     }
   }
 
@@ -220,8 +220,8 @@ class Mycontroller extends GetxController{
   decrementshort(){
     if(shorts.value <= 0 ){
       Get.snackbar('items', 'No items added to cart', icon: Icon(Icons.add_alert), barBlur: 20,
-      isDismissible: true,
-      duration: Duration(seconds: 2));
+          isDismissible: true,
+          duration: Duration(seconds: 2));
     }
     else{
       shorts.value--;
